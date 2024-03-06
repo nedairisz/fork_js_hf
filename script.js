@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
     elemekFormazasa1();
     esemenykezeles1();
     esemenykezeles2();
-    esemenykezeles3()
+   
     esemenykezeles4()
 });
 
@@ -50,9 +50,7 @@ function esemenykezeles1() {
     const listaELEM = document.querySelector(".lista");
     const kattintasutanELEM = document.querySelector(".kattintasutan");
 
-    listaELEM.addEventListener("click", function() {
-        kattintasutanELEM.innerHTML = listaELEM.innerHTML;
-    });
+    listaELEM.addEventListener("click", function() {kattintasutanELEM.innerHTML = listaELEM.innerHTML;});
 }
 function esemenykezeles2(){
     const feladatELEM = document.querySelector(".feladat");
@@ -70,27 +68,25 @@ function esemenykezeles2(){
         const ujDiv = document.createElement("div");
         
         // 5. Kép hozzáadása az új divhez
-        ujDiv.innerHTML = '<img src="kep/ez" alt="a kép">';
+        ujDiv.innerHTML = '<img src="kep/ez.png" alt="a kép">';
         
         // 6. Új div hozzáadása a feladatElemhez
         feladatELEM.appendChild(ujDiv);
+        esemenykezeles3()
     });
 }
 
-// ROSSZ
 function esemenykezeles3(){
     const kepELEM = document.querySelector(".feladat img");
-
-    kepELEM.addEventListener("mouseenter", function() {
-        kep.style.width = "200px"; 
-    });
+    console.log(kepELEM)
+    kepELEM.addEventListener("mouseenter", function() {kepELEM.style.width = "120%"; });
     
     kepELEM.addEventListener("mouseleave", function() {
-        kep.style.width = "auto"; 
+        kepELEM.style.width = "100%"; 
     });
 }
     
-// ROSSZ
+
 function esemenykezeles4(){
 
     const taroloElemek = document.querySelectorAll(".elem");
