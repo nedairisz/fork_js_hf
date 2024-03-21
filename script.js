@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+$("load", function () {
     elemekElerese1();
     elemekElerese2();
     elemekElerese3();
@@ -11,8 +11,8 @@ window.addEventListener("load", function () {
 });
 
 function elemekElerese1() {
-    const ELEM = document.querySelectorAll("section h2")[0];
-    console.log(ELEM.innerHTML);
+    const ELEM = $("section h2");
+    console.log(ELEM.html());
 }
 
 function elemekElerese2() {
@@ -21,8 +21,8 @@ function elemekElerese2() {
     newPTag.textContent = "Jó reggelt!";
     ELEM.appendChild(newPTag); */
 
-    ELEM = document.querySelectorAll("#ide")[0];
-    ELEM.innerHTML = "<p>Jó reggelt!</p>";
+    const ELEM = $("#ide");
+    ELEM.html("<p>Jó reggelt!</p>")
 }
 
 function elemekElerese3() {
@@ -31,12 +31,12 @@ function elemekElerese3() {
     newPTag.textContent = "Jó reggelt!";
     ELEM.appendChild(newPTag); */
 
-    const ELEM = document.querySelectorAll(".ide")[0];
-    ELEM.innerHTML = "<p>Jó reggelt!</p>";
+    const ELEM = $(".ide");
+    ELEM.eq(0).html("<p>Jó reggelt!</p>")
 }
 
 function elemekElerese4() {
-    const listaELEM = document.querySelector(".lista");
+    const listaELEM = $(".lista");
     let szamLista = "<ul>";
     for (let i = 0; i < 5; i++) {
         let veletlenSzam = Math.floor(Math.random() * 21) + 10;
@@ -44,6 +44,8 @@ function elemekElerese4() {
     }
     szamLista += "</ul>";
     listaELEM.innerHTML = szamLista;
+
+    //return ELEM.eq(0).html(txt)
 }
 
 function elemekFormazasa1(){
